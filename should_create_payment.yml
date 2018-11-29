@@ -5,16 +5,20 @@ request:
     Content-Type: application/json
   body: |
     {
-      "productId": 11,
-      "quantity": 10
+      "orderId": 1,
+      "amount": 123,
+      "method": "mobile"
     }
   matchers:
     body:
-    - path: $.productId
+    - path: $.orderId
       type: by_regex
       value: "[0-9]+"
-    - path: $.quantity
+    - path: $.amount
       type: by_regex
       value: "[0-9]+"
+    - path: $.method
+      type: by_regex
+      value: "\w+"
 response:
   status: 201
