@@ -7,7 +7,7 @@ request:
     {
       "orderId": 1,
       "amount": 123,
-      "method": "mobile"
+      "method": "desktop"
     }
   matchers:
     body:
