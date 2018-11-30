@@ -9,16 +9,5 @@ request:
       "amount": 123,
       "method": "desktop"
     }
-  matchers:
-    body:
-    - path: $.orderId
-      type: by_regex
-      value: "[0-9]+"
-    - path: $.amount
-      type: by_regex
-      value: "[0-9]+"
-    - path: $.method
-      type: by_regex
-      value: "\w+"
 response:
   status: 201
